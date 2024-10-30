@@ -1,18 +1,14 @@
-name: CI
+name: First Workflow
 
 on: 
-  push:
-    branches:
-      - main
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch: # manual triggering
 
 jobs:
-  echo-job:
-    runs-on: ubuntu-latest
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one 
+              run: echo "This is Job 1"
 
-    steps:
-    - name: Step 1
-      run: echo "Step 1 complete!"
-
-    - name: Step 2
-      run: echo "Step 2 complete!"
+            - name: Step two
+              run: echo "This is Job 2"
